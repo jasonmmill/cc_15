@@ -29,7 +29,21 @@ function addRiskItem(riskName, riskLevel, department) {
         event.stopPropagation()
     })
 
-// End Task 3 
+// End Task 3
+
+// Task 4 - Categorizing Risks by Level
+
+    if (riskLevel === "High") {
+        newCard.style.backgroundColor = "red"
+    }
+    else if (riskLevel === "Medium") {
+        newCard.style.backgroundColor = "yellow"
+    }
+    else if (riskLevel === "Low") {
+        newCard.style.backgroundColor = "green"
+    }
+
+// End Task 4
 
     newCard.appendChild(riskTitle)
     newCard.appendChild(riskLabel)
@@ -39,6 +53,13 @@ function addRiskItem(riskName, riskLevel, department) {
     riskDashboard.appendChild(newCard)
 }
 
+// Task 2 Test Cases
 addRiskItem("Data Breach", "High", "IT")
 addRiskItem("Supply Chain Disruption", "Medium", "Operations")
 
+// Task 3 Test Cases 
+addRiskItem("Market Fluctuations", "High", "Finance")
+
+// Task 4 Test Cases 
+addRiskItem("Cybersecurity Threat", "High", "IT")
+addRiskItem("HR Compliance Issue", "Low", "Human Resources")
