@@ -23,7 +23,7 @@ function addRiskItem(riskName, riskLevel, department) {
 
     deleteButton.addEventListener("click", (event) => {
         newCard.remove()
-        event.stopPropagation()
+        event.stopPropagation() // Task 6 - Handling Event Propagation
     })
 // End Task 3
 
@@ -75,7 +75,7 @@ increaseRiskLevel.addEventListener("click", (event) => {
             card.style.backgroundColor = "green"
         }
     })
-    event.stopPropagation()
+    event.stopPropagation() // Task 6 - Handling Event Propagation
     console.log("Risk Levels Updated")
 })
 // End Task 5
@@ -86,9 +86,12 @@ riskDashboard.appendChild(increaseRiskLevel)
 addRiskItem("Data Breach", "High", "IT")
 addRiskItem("Supply Chain Disruption", "Medium", "Operations")
 
-// Task 3 Test Cases 
+// Task 3 Test Case
 addRiskItem("Market Fluctuations", "High", "Finance")
 
 // Task 4 Test Cases 
 addRiskItem("Cybersecurity Threat", "High", "IT")
 addRiskItem("HR Compliance Issue", "Low", "Human Resources")
+
+// Task 5 Test Case
+addRiskItem("Employee Retention", "Low", "HR")
