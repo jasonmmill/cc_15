@@ -27,6 +27,7 @@ function addRiskItem(riskName, riskLevel, department) { // function to create a 
 
     deleteButton.addEventListener("click", (event) => { // event listener on click
         newCard.remove() // remove card on click of button
+        console.log(`${riskName} Card Resolved`)
         event.stopPropagation() // Task 6 - Handling Event Propagation
     })
 // End Task 3
